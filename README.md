@@ -16,10 +16,15 @@ I'm using uf2-stm32f103 by @mmoskal (https://github.com/mmoskal/uf2-stm32f103). 
 If you trust me enough to use my pre-compiled binaries / firmwares, you can find them at the releases page of this project. _(They are just compiled versions of the current state of this whole project, nothing less, nothing more. That was the whole point, after all)_
 
 ## QMK
+### Build
 Just clone the official vial-qmk repo, replace `keyboards/vertex/cycle8` with this project's `qmk/cycle8` directory and build as usual (`make vertex/cycle8:vial`)
+### Flash
+Flash as usually with UF2BOOT
 
 ## UF2BOOT
+### Build
 To build, go into `uf2boot/src` and do `make TARGET=BLUEPILL V=1`. It kinda sometimes maybe perhaps builds by any chance. You'll probably need to hack some paths in the Makefiles that I have hardcoded for now, to at least get it to build.
+### Flash
 To flash this, you'll need an ST-LINK programmer. They're quite cheap and accessible. Next you'll want to take a look at the underside of the pcb. Orientate it in a way that the spacebar is facing North, face down. In this orientation, on the very right edge of the board you'll notice 4 unsoldered pins named `U4`. That's an ST-LINK port. In this orientation _(the STM chip should be North-West from the U4 port if you're holding it right)_, the pinout is the following, starting for the uppermost:
 *1: VSS / GND
 *2: SWCLK
