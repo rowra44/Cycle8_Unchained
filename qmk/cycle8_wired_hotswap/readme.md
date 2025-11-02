@@ -1,27 +1,85 @@
-# cycle8
+# RGB Matrix instead of RGB light
+In keyboard.json inside features, replace rgblight with rgb_matrix, then also replace the whole rgblight stanza with the following, finally in vial.json replace qmg_rgblight with vialrgb.
 
-![Cycle8](https://i.imgur.com/gCExreih.png)
+"rgb_matrix": {
+        "driver": "ws2812",
+        "sleep": true,
+        "animations": {
+            "alphas_mods": true,
+            "gradient_up_down": true,
+            "gradient_left_right": true,
+            "breathing": true,
+            "band_sat": true,
+            "band_val": true,
+            "band_pinwheel_sat": true,
+            "band_pinwheel_val": true,
+            "band_spiral_sat": true,
+            "band_spiral_val": true,
+            "cycle_all": true,
+            "cycle_left_right": true,
+            "cycle_up_down": true,
+            "cycle_out_in": true,
+            "cycle_out_in_dual": true,
+            "rainbow_moving_chevron": true,
+            "cycle_pinwheel": true,
+            "cycle_spiral": true,
+            "dual_beacon": true,
+            "rainbow_beacon": true,
+            "rainbow_pinwheels": true,
+            "hue_breathing": true,
+            "hue_pendulum": true,
+            "hue_wave": true,
+            "typing_heatmap": true,
+            "digital_rain": true,
+            "solid_reactive_simple": true,
+            "solid_reactive": true,
+            "solid_reactive_wide": true,
+            "solid_reactive_multiwide": true,
+            "solid_reactive_cross": true,
+            "solid_reactive_multicross": true,
+            "solid_reactive_nexus": true,
+            "solid_reactive_multinexus": true,
+            "splash": true,
+            "multisplash": true,
+            "solid_splash": true,
+            "solid_multisplash": true
 
-A customizable soldered TKL/80% keyboard.
-
-* Keyboard Maintainer: [EASON](https://github.com/EasonQian1)
-* Hardware Supported: Cycle8 PCB
-* Hardware Availability: [EASON](https://github.com/EasonQian1)
-
-Make example for this keyboard (after setting up your build environment):
-
-    make vertex/cycle8:default
-
-Flashing example for this keyboard:
-
-    make vertex/cycle8:default:flash
-
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
-
-## Bootloader
-
-Enter the bootloader in 3 ways:
-
-* **Bootmagic reset**: Hold down Esc in the keyboard then replug
-* **Physical reset button**: Briefly press the button on the back of the PCB
-* **Keycode in layout**: Press the key mapped to `QK_BOOT`
+        },
+        "layout": [
+            {
+                "flags": 4,
+                "x": 0,
+                "y": 0
+            },
+            {
+                "flags": 4,
+                "x": 1,
+                "y": 0
+            },
+            {
+                "flags": 4,
+                "x": 2,
+                "y": 0
+            },
+            {
+                "flags": 4,
+                "x": 3,
+                "y": 0
+            },
+            {
+                "flags": 4,
+                "x": 4,
+                "y": 0
+            },
+            {
+                "flags": 4,
+                "x": 5,
+                "y": 0
+            },
+            {
+                "flags": 4,
+                "x": 6,
+                "y": 0
+            }
+        ]
+    },
