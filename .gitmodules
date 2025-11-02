@@ -1,0 +1,3 @@
+[submodule "uf2boot"]
+	path = uf2boot
+	url = https://github.com/markv9401/uf2boot-stm32f103.git
