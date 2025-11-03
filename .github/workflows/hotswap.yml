@@ -25,12 +25,12 @@ jobs:
           qmk setup vial-kb/vial-qmk -b vial --yes
       - name: Replace Cycle8
         run: |
-          rm -rf vial-qmk/keyboards/vertex/cycle8/*
-          cp -r qmk/cycle8_wired_hotswap/* vial-qmk/keyboards/vertex/cycle8/
+          rm -rf qmk_firmware/keyboards/vertex/cycle8/*
+          cp -r qmk/cycle8_wired_hotswap/* qmk_firmware/keyboards/vertex/cycle8/
 
       - name: Compile firmware
         run: |
-          make -C vial-qmk vertex/cycle8:vial
+          make -C qmk_firmware vertex/cycle8:vial
 
       - name: Create Release
         uses: ncipollo/release-action@v1.20.0
