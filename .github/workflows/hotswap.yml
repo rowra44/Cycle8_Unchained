@@ -22,13 +22,13 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install qmk
-          qmk setup vial-kb/vial-qmk -b vial --yes
+          qmk setup vial-kb/vial-qmk -b vial -H ./vial-qmk --yes
       - name: Replace Cycle8
         run: |
           ls
-          rm -rf qmk_firmware/keyboards/vertex/cycle8/*
-          ls qmk_firmware/keyboards/vertex
-          cp -r qmk/cycle8_wired_hotswap/* qmk_firmware/keyboards/vertex/cycle8/
+          rm -rf vial-qm/keyboards/vertex/cycle8/*
+          ls vial-qm/keyboards/vertex
+          cp -r qmk/cycle8_wired_hotswap/* vial-qm/keyboards/vertex/cycle8/
 
       - name: Compile firmware
         run: |
